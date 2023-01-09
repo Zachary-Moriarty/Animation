@@ -106,6 +106,7 @@ class GameEngine {
                 this.entities.splice(i, 1);
             }
         }
+        //console.log(this.keys);
     };
 
     loop() {
