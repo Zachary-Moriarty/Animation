@@ -1,4 +1,4 @@
-class link{
+class Link{
     constructor(){
         this.animator = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'), 0, 33, 24, 32, 24, 0.035);
 
