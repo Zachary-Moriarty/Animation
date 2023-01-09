@@ -3,7 +3,7 @@ class link{
         this.animator = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'), 0, 33, 24, 32, 24, 0.035);
 
         this.facing = 2;//0 = up, 1 = right, 2 = down, 3 = left
-        this.state = 0;//0 = idle. 1 = walking
+        this.state = 1;//0 = idle. 1 = walking
 
         this.x = 30;
         this.y = 30;
