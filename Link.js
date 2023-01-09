@@ -42,43 +42,43 @@ class link{
         this.state = 0;
 
         //determine vertical
-        if(gameEngine.keys['w'] && !gameEngine.keys['s'] && !gameEngine.keys['Shift']){
+        if(gameEngine.keys['w'] && !gameEngine.keys['s'] && !gameEngine.keys[' ']){
             this.facing = 0;
             this.state = 1;
             this.y -= 1;
         }
-        else if(gameEngine.keys['s'] && !gameEngine.keys['w'] && !gameEngine.keys['Shift']){
+        else if(gameEngine.keys['s'] && !gameEngine.keys['w'] && !gameEngine.keys[' ']){
             this.facing = 2;
             this.state = 1;
             this.y += 1;
         }
-        else if(gameEngine.keys['w'] && !gameEngine.keys['s'] && gameEngine.keys['Shift']){
+        else if(gameEngine.keys['w'] && !gameEngine.keys['s'] && gameEngine.keys[' ']){
             this.facing = 0;
             this.state = 1;
             this.y -= 2;
         }
-        else if(gameEngine.keys['s'] && !gameEngine.keys['d'] && gameEngine.keys['Shift']){
+        else if(gameEngine.keys['s'] && !gameEngine.keys['d'] && gameEngine.keys[' ']){
             this.facing = 2;
             this.state = 1;
             this.y += 2;
         }
         //determine horizontal
-        if(gameEngine.keys['a'] && !gameEngine.keys['d'] && !gameEngine.keys['Shift']){
+        if(gameEngine.keys['a'] && !gameEngine.keys['d'] && !gameEngine.keys[' ']){
             this.facing = 3;
             this.state = 1;
             this.x -= 1;
         }
-        else if(gameEngine.keys['d'] && !gameEngine.keys['a'] && !gameEngine.keys['Shift']){
+        else if(gameEngine.keys['d'] && !gameEngine.keys['a'] && !gameEngine.keys[' ']){
             this.facing = 1;
             this.state = 1;
             this.x += 1;
         }
-        else if(gameEngine.keys['a'] && !gameEngine.keys['d'] && gameEngine.keys['Shift']){
+        else if(gameEngine.keys['a'] && !gameEngine.keys['d'] && gameEngine.keys[' ']){
             this.facing = 3;
             this.state = 1;
             this.x -= 2;
         }
-        else if(gameEngine.keys['d'] && !gameEngine.keys['a'] && gameEngine.keys['Shift']){
+        else if(gameEngine.keys['d'] && !gameEngine.keys['a'] && gameEngine.keys[' ']){
             this.facing = 1;
             this.state = 1;
             this.x += 2;
