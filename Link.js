@@ -21,20 +21,20 @@ class Link{
             }
         }
 
-        this.animations[0][0] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,0,24,32,1,.035)
-        this.animations[1][0] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,33,24,32,1,.035)
-        this.animations[2][0] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,66,24,32,1,.035)
-        this.animations[3][0] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,99,24,32,1,.035)
+        this.animations[0][0] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,0,24,32,1,.05);
+        this.animations[1][0] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,33,24,32,1,.05);
+        this.animations[2][0] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,66,24,32,1,.05);
+        this.animations[3][0] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,99,24,32,1,.05);
 
-        this.animations[0][1] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,0,24,32,24,.035)
-        this.animations[1][1] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,33,24,32,24,.035)
-        this.animations[2][1] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,66,24,32,24,.035)
-        this.animations[3][1] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,99,24,32,24,.035)
+        this.animations[0][1] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,0,24,32,24,.05);
+        this.animations[1][1] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,33,24,32,24,.05);
+        this.animations[2][1] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,66,24,32,24,.05);
+        this.animations[3][1] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,99,24,32,24,.05);
 
-        this.animations[0][2] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,0,24,32,24,.035)
-        this.animations[1][2] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,33,24,32,24,.035)
-        this.animations[2][2] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,66,24,32,24,.035)
-        this.animations[3][2] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,99,24,32,24,.035)
+        this.animations[0][2] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,0,24,32,24,.025);
+        this.animations[1][2] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,33,24,32,24,.025);
+        this.animations[2][2] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,66,24,32,24,.025);
+        this.animations[3][2] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,99,24,32,24,.025);
     }
     
     update(){
@@ -45,43 +45,43 @@ class Link{
         if(gameEngine.keys['w'] && !gameEngine.keys['s'] && !gameEngine.keys[' ']){
             this.facing = 0;
             this.state = 1;
-            this.y -= 1;
+            this.y -= 2;
         }
         else if(gameEngine.keys['s'] && !gameEngine.keys['w'] && !gameEngine.keys[' ']){
             this.facing = 2;
             this.state = 1;
-            this.y += 1;
+            this.y += 2;
         }
         else if(gameEngine.keys['w'] && !gameEngine.keys['s'] && gameEngine.keys[' ']){
             this.facing = 0;
-            this.state = 1;
-            this.y -= 2;
+            this.state = 2;
+            this.y -= 4;
         }
-        else if(gameEngine.keys['s'] && !gameEngine.keys['d'] && gameEngine.keys[' ']){
+        else if(gameEngine.keys['s'] && !gameEngine.keys['w'] && gameEngine.keys[' ']){
             this.facing = 2;
-            this.state = 1;
-            this.y += 2;
+            this.state = 2;
+            this.y += 4;
         }
         //determine horizontal
         if(gameEngine.keys['a'] && !gameEngine.keys['d'] && !gameEngine.keys[' ']){
             this.facing = 3;
             this.state = 1;
-            this.x -= 1;
+            this.x -= 2;
         }
         else if(gameEngine.keys['d'] && !gameEngine.keys['a'] && !gameEngine.keys[' ']){
             this.facing = 1;
             this.state = 1;
-            this.x += 1;
+            this.x += 2;
         }
         else if(gameEngine.keys['a'] && !gameEngine.keys['d'] && gameEngine.keys[' ']){
             this.facing = 3;
-            this.state = 1;
-            this.x -= 2;
+            this.state = 2;
+            this.x -= 4;
         }
         else if(gameEngine.keys['d'] && !gameEngine.keys['a'] && gameEngine.keys[' ']){
             this.facing = 1;
-            this.state = 1;
-            this.x += 2;
+            this.state = 2;
+            this.x += 4;
         }
         //screen wraping
         if(this.x > 1024){
