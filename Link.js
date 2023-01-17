@@ -16,25 +16,25 @@ class Link{
     loadAnimations(){
         for(var i = 0; i < 4; i++) {//4 directions
             this.animations.push([]);
-            for(var j = 0; j < 3; j++){//2 states
+            for(var j = 0; j < 3; j++){//3 states
                 this.animations[i].push([]);
             }
         }
 
-        this.animations[0][0] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,0,24,32,1,.05);
-        this.animations[1][0] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,33,24,32,1,.05);
-        this.animations[2][0] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,66,24,32,1,.05);
-        this.animations[3][0] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,99,24,32,1,.05);
+        this.animations[0][0] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,0,24,32,1,.05, 2);
+        this.animations[1][0] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,33,24,32,1,.05, 2);
+        this.animations[2][0] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,66,24,32,1,.05, 2);
+        this.animations[3][0] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,99,24,32,1,.05, 2);
 
-        this.animations[0][1] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,0,24,32,24,.05);
-        this.animations[1][1] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,33,24,32,24,.05);
-        this.animations[2][1] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,66,24,32,24,.05);
-        this.animations[3][1] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,99,24,32,24,.05);
+        this.animations[0][1] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,0,24,32,24,.05, 2);
+        this.animations[1][1] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,33,24,32,24,.05, 2);
+        this.animations[2][1] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,66,24,32,24,.05, 2);
+        this.animations[3][1] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,99,24,32,24,.05, 2);
 
-        this.animations[0][2] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,0,24,32,24,.025);
-        this.animations[1][2] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,33,24,32,24,.025);
-        this.animations[2][2] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,66,24,32,24,.025);
-        this.animations[3][2] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,99,24,32,24,.025);
+        this.animations[0][2] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,0,24,32,24,.025, 2);
+        this.animations[1][2] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,33,24,32,24,.025, 2);
+        this.animations[2][2] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,66,24,32,24,.025, 2);
+        this.animations[3][2] = new animator(ASSET_MANAGER.getAsset('./assets/LinkSprite.png'),0,99,24,32,24,.025, 2);
     }
     
     update(){
@@ -84,18 +84,19 @@ class Link{
             this.x += 4;
         }
         //screen wraping
-        if(this.x > 1024){
+        /*
+        if(this.x > 192){
             this.x = -64;
         }
         else if(this.x < -64){
-            this.x = 1024;
+            this.x = 192;
         }
-        if(this.y > 768){
+        if(this.y > 160){
             this.y = -64;
         }
         else if(this.y < -64){
-            this.y = 768;
-        }
+            this.y = 160;
+        }*/
     }
 
     draw(ctx){
